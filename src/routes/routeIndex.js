@@ -39,11 +39,4 @@ router.get('/users', (req, res) => {
             res.status(200).json({ usuario: 'oliver sierra' });
         }, 3500);*/
 });
-
-router.get('/home', (req, res) => {
-    //res.render('saludo', { max: 15 });
-    //res.sendFile(path.join(__dirname,'/views/saludo.html'));
-    res.sendFile(path.join(__dirname,'../pages/home.html'));
-});
-
 module.exports = router;

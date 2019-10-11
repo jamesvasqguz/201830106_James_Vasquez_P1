@@ -90,8 +90,8 @@ function onChange(event) {
     }
 // enviar palabra al servido con ruta /postusers
     axios.post('http://localhost:3000/postusers', {
-            firstName: 'jhonny',
-            lastName: 'garcia',
+            firstName: 'james',
+            lastName: 'vasquez',
             
             text: tmp
            

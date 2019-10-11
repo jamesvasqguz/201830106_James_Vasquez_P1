@@ -12,6 +12,8 @@ app.set('views',path.join(__dirname, 'pages'));
 
 //Rutas
 app.use(require('./routes/routeIndex'));
+// analizar
+app.use(require ('./routes/Analizar'));
 
 //middleware
 app.use(express.static(path.join(__dirname, 'public')));
