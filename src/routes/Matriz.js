@@ -1,7 +1,9 @@
+//imports
 const express = require('express');
 const router = express.Router();
 router.use(express.json());
 const path = require('path');
+
 // variables
 let bolean = true;
 let tipo;
@@ -24,7 +26,6 @@ router.post('/postusers', (req, res) => {
     res.status(200).send('wrong');
 });
 
-// automata
 function automata(textoA) {
     // letra obtenida
     var aux = textoA.split("");
@@ -157,7 +158,7 @@ function automata(textoA) {
 
     }
 }
-//////
+
 // funcion para obtener la expresion con que se movera en el automata
 function detectarPalabra(textoTxt) {
     // Globales
@@ -239,6 +240,51 @@ function detectarPalabra(textoTxt) {
     return tipoLetra;
 }
 
+var matrix = new Array(6);
+matrix[0] = new Array(4);
+matrix[1] = new Array(4);
+matrix[2] = new Array(4);
+matrix[3] = new Array(4);
+matrix[4] = new Array(4);
+matrix[5] = new Array(4);
+
+//introducimos valores en las celdas
+matrix[0][0] = 'S4';
+matrix[0][1] = null;
+matrix[0][2] = 'S1';
+matrix[0][3] = 'S5';
+
+matrix[1][0] = null;
+matrix[1][1] = 'S2';
+matrix[1][2] = 'S1';
+matrix[1][3] = null;
+
+matrix[2][0] = null;
+matrix[2][1] = null;
+matrix[2][2] = 'S3';
+matrix[2][3] = null;
+
+matrix[3][0] = null;
+matrix[3][1] = null;
+matrix[3][2] = null;
+matrix[3][3] = null;
+
+matrix[4][0] = 'S4';
+matrix[4][1] = null;
+matrix[4][2] = 'S4';
+matrix[4][3] = null;
+
+matrix[5][0] = null;
+matrix[5][1] = null;
+matrix[5][2] = null;
+matrix[5][3] = null;
+
+for (var i = 0; i < matrix.length; i++) {
+    for (var j = 0; j < 4; i++) {
+
+
+    }
+}
 // metodo para obtener el token
 router.get('/users', (req, res) => {
 
